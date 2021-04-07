@@ -1,0 +1,228 @@
+.openEvents {
+    background-color: #8b8bb8;
+  }
+  .blockHeading {
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+    top: 40px;
+    text-align: center;
+  }
+  .sliderScreen {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100vh;
+  }
+  
+  .eventCardMobile {
+    display: none;
+  
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 6px;
+    height: 180px;
+    width: 100%;
+    border-radius: 24px;
+    background-color: #efedff;
+  
+    margin-inline: 18px;
+  }
+  /* .eventCard {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 6px;
+    height: 450px;
+    width: 350px;
+    flex-direction: column;
+    background-color: #efedff;
+    border-radius: 60px;
+    margin-inline: 18px;
+  } */
+  .cardRight {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+  }
+  .eventDes {
+  }
+  .eventTitle {
+    font-size: 18px !important;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+  .eventTag {
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: darkgrey;
+  }
+  .eventDescription {
+    font-size: 14px;
+    font-weight: 400;
+    color: grey;
+    text-overflow: ellipsis;
+  }
+  .eventImage {
+    height: 160px;
+    width: 120px;
+    border-radius: 21.6px;
+  }
+  .eventCard p {
+    margin-bottom: 6px;
+  }
+  .registerButton {
+    border: none;
+    border-radius: 8px;
+    padding-inline: 16px;
+    background-color: #8b8bb8;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+  }
+  .registerButton:hover {
+    background-color: white;
+    color: #8b8bb8;
+  }
+  @media only screen and (max-width: 800px) {
+    .sliderScreen {
+      flex-direction: column;
+      padding: 0 12px;
+      padding-top: 40px;
+    }
+    .openEvent {
+      display: none !important;
+    }
+    .eventCardMobile {
+      display: flex;
+    }
+    .blockHeading {
+      top: 20px;
+    }
+  }
+  
+  .openEvent{
+      position: relative;
+      z-index: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      margin: 50px 0;
+      background-color: #8b8bb8;
+        height: 100%;
+    }
+    
+  .openEvent-card{
+      position: relative;
+      width: 400px;
+      height: 450px;
+      background: #efedff;
+      margin: 20px;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+      border-radius: 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 80px;
+      backdrop-filter: blur(5px);
+    }
+   .openEvent-card .openEvent-content{
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      opacity: 01;
+      transition: 0.5s;
+    }
+    .lastCard{
+        display: flex;
+        background-color: rgb(139, 139, 184);
+        align-items: center;
+        align-content: center;
+  
+    }
+   .openEvent-card:hover .openEvent-content{
+      transform: translateY(-40px);
+    }
+    .openEvent-card .openEvent-content .open-imgbx{
+      position: relative;
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 10px solid rgba(0,0,0,0.25);
+    }
+    .openEvent-card .openEvent-content .open-imgbx img{
+      position: absolute;
+      top: 0;
+      left: 0px;
+    }
+     .openEvent-card .openEvent-content .openEvent-contentBx h3{
+      color:blue;
+  
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-weight: 500;
+      font-size: 18px;
+      text-align: center;
+      margin: 20px 0 10px;
+      line-height: 1.1em;
+    }
+     .openEvent-card .openEvent-content .openEvent-contentBx h3 span{
+      font-size: 12px;
+      font-weight: 300;
+      text-transform: initial;
+    }
+    
+     .openEvent-card .openEvent-content .openEvent-contentBx p{
+      color: rgb(187, 255, 0);
+      letter-spacing: 1px;
+      font-size: 14px;
+        font-weight: 300;
+      text-align: center;
+    }
+     .openEvent-card .openEvent-content .openEvent-detail{
+      opacity: 0;
+      position: absolute;
+      display: flex;
+      bottom: -45px;
+    }
+     .openEvent-card .openEvent-content .openEvent-detail p{
+      transform: translateY(0px);
+      transition: 0.5s;
+      color: cyan;
+    }
+     .openEvent-card .openEvent-content .openEvent-detail p{
+      transform: translateY(0px);
+        text-transform: lowercase;
+    }
+     .openEvent-card .openEvent-content .openEvent-detail button{
+      transform: translateY(40px);
+      transition: 0.5s;
+    }
+     .openEvent-card .openEvent-content .openEvent-detail button{
+      transform: translateY(0px);
+    }
+     .openEvent-card:hover .openEvent-content .openEvent-detail{
+      color: rgb(245, 245, 245);
+      opacity: 1;
+      margin-top: 8px;
+      letter-spacing: 1px;
+      font-size: 14px;
+      text-align: center;
+    }
+     .openEvent-card:hover .openEvent-content .openEvent-btn{
+      opacity: 1;
+      padding: 3px;
+      background: linear-gradient(45deg, rgb(231, 18, 196), rgb(84, 2, 92));
+      font-size: 18px;
+      border-radius: 6px;
+      border-color: rgb(183, 0, 255);
+    }
+  
+     
